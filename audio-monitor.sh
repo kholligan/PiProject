@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DIR='/proc/asound/card1/pcm0p/sub0/status'
-CMD='python /home/pi/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/library/tree.py'
+DIR='/proc/asound/card0/pcm0p/sub0/status'
+CMD='python3 /home/pi/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/library/treeClient.py'
 
 content=''
 while true
@@ -11,5 +11,5 @@ do
 		content=$new_content
 		$CMD
 	fi
-	sleep 0.25
+	sleep 0.05
 done
